@@ -1,46 +1,36 @@
 {
-  "name": "hexo-theme-cactus",
-  "version": "3.0.0",
-  "description": "A responsive, clean and simple theme for Hexo.",
-  "main": "index.js",
+  "name": "hexo-theme-next",
+  "version": "7.8.0",
+  "description": "Elegant and powerful theme for Hexo.",
+  "main": "gulpfile.js",
   "scripts": {
-    "lint": "gulp lint --silent",
-    "test": "gulp validate --silent",
-    "clean": "stylus-supremacy format source/css/**/*.styl --options .stylintrc -r"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/probberechts/cactus-dark.git"
+    "url": "git+https://github.com/theme-next/hexo-theme-next.git"
   },
   "keywords": [
-    "Hexo",
-    "Theme",
-    "Cactus"
+    "hexo",
+    "theme",
+    "next"
   ],
-  "author": "Pieter Robberechts",
-  "license": "MIT",
+  "author": "NexT <support@theme-next.org> (https://theme-next.org)",
+  "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/probberechts/cactus-dark/issues"
+    "url": "https://github.com/theme-next/hexo-theme-next/issues"
   },
-  "homepage": "https://github.com/probberechts/cactus-dark#readme",
+  "homepage": "https://theme-next.org",
   "devDependencies": {
-    "del": "*",
-    "gulp": "^4.0.0",
-    "gulp-decompress": "*",
-    "gulp-download": "*",
-    "gulp-jshint": "*",
-    "gulp-stylint": "*",
-    "js-yaml": "*",
-    "jshint": "^2.9.6",
-    "jshint-stylish": "*",
-    "stylint": "*",
-    "stylint-stylish": "*",
-    "stylus-supremacy": "^2.12.2"
+    "eslint": "^6.8.0",
+    "eslint-config-theme-next": "^1.1.4",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-shell": "^0.8.0",
+    "js-yaml": "^3.13.1",
+    "stylint": "^2.0.0"
   },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "*",
-    "vazir-font": "*",
-    "jquery": "^3.3.1",
-    "justifiedGallery": "^3.6.5"
+  "engines": {
+    "node": ">=10.9.0"
   }
 }

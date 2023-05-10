@@ -1,116 +1,48 @@
-var decompress = require('gulp-decompress');
-var del = require('del');
-var download = require("gulp-download");
-var fs = require('fs');
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var path = require('path');
-var stylint = require('gulp-stylint');
-var stylish = require('jshint-stylish');
-var yaml = require('js-yaml');
+const fs = require('fs');
+const path = require('path');
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
+const shell = require('gulp-shell');
+const yaml = require('js-yaml');
 
+gulp.task('lint', () => gulp.src([
+  './source/js/**/*.js',
+  './scripts/**/*.js'
+]).pipe(eslint())
+  .pipe(eslint.format()));
 
-gulp.task('lib:clean',function(){
-  return del([ './source/lib/*' ]);
-})
+gulp.task('lint:stylus', shell.task([
+  'npx stylint ./source/css/'
+]));
 
-gulp.task('lib:fontAwesome',function(){
-  return gulp.src([
-    'node_modules/@fortawesome/fontawesome-free/webfonts/*',
-    'node_modules/@fortawesome/fontawesome-free/css/all.min.css'
-  ], {base: 'node_modules/@fortawesome/fontawesome-free'})
-    .pipe(gulp.dest('./source/lib/font-awesome'))
-})
-
-gulp.task('lib:mesloFont', function () {
-  return download('https://github.com/andreberg/Meslo-Font/blob/master/dist/v1.2/Meslo%20LG%20v1.2.zip?raw=true')
-    .pipe(decompress({
-      filter: file => path.extname(file.path) == '.ttf',
-      strip: 1
-    }))
-    .pipe(gulp.dest('./source/lib/meslo-LG'));
-});
-
-
-gulp.task('lib:vazirFont',function(){
-  return gulp.src([
-    'node_modules/vazir-font/dist/*',
-  ], {base: 'node_modules/vazir-font/dist'})
-    .pipe(gulp.dest('./source/lib/vazir-font'))
-})
-
-gulp.task('lib:justifiedGallery',function(){
-  return gulp.src([
-    'node_modules/justifiedGallery/dist/css/*.min.css',
-    'node_modules/justifiedGallery/dist/js/*.min.js'
-  ], {base: 'node_modules/justifiedGallery/dist'})
-    .pipe(gulp.dest('./source/lib/justified-gallery'))
-})
-
-gulp.task('lib:jQuery',function(){
-  return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
-    .pipe(gulp.dest('./source/lib/jquery'))
-})
-
-gulp.task('lint:js', function() {
-  return gulp.src([
-    './source/js/**/*.js',
-  ]).pipe(jshint())
-    .pipe(jshint.reporter(stylish));
-});
-
-gulp.task('lint:stylus', function () {
-  return gulp.src([
-    './source/css/*.styl',
-    './source/css/_partial/*.styl',
-    './source/css/_colors/*.styl'
-  ]).pipe(stylint({
-      config: '.stylintrc',
-      reporter: {
-        reporter: 'stylint-stylish',
-        reporterOptions: {
-          verbose: true
-        }
-      }
-    }))
-    .pipe(stylint.reporter());
-});
-
-gulp.task('validate:config', function(cb) {
-  var themeConfig = fs.readFileSync(path.join(__dirname, '_config.yml'));
+gulp.task('validate:config', cb => {
+  const themeConfig = fs.readFileSync(path.join(__dirname, '_config.yml'));
 
   try {
     yaml.safeLoad(themeConfig);
-    cb();
-  } catch(error) {
-    cb(new Error(error));
+    return cb();
+  } catch (error) {
+    return cb(new Error(error));
   }
 });
 
-gulp.task('validate:languages', function(cb) {
-  var languagesPath = path.join(__dirname, 'languages');
-  var languages = fs.readdirSync(languagesPath);
-  var errors = [];
-  for (var i in languages) {
-    var languagePath = path.join(languagesPath, languages[i]);
+gulp.task('validate:languages', cb => {
+  const languagesPath = path.join(__dirname, 'languages');
+  const languages = fs.readdirSync(languagesPath);
+  const errors = [];
+
+  languages.forEach(lang => {
+    const languagePath = path.join(languagesPath, lang);
     try {
       yaml.safeLoad(fs.readFileSync(languagePath), {
         filename: path.relative(__dirname, languagePath)
       });
-    } catch(error) {
+    } catch (error) {
       errors.push(error);
     }
-  }
-  if (errors.length == 0) {
-    cb();
-  } else {
-    cb(errors);
-  }
+  });
+
+  return errors.length === 0 ? cb() : cb(errors);
 });
 
-gulp.task('lib', gulp.series(
-  'lib:clean', 'lib:jQuery', 'lib:fontAwesome', 'lib:mesloFont',
-  'lib:vazirFont', 'lib:justifiedGallery'));
-gulp.task('lint', gulp.parallel('lint:js', 'lint:stylus'));
-gulp.task('validate', gulp.parallel('validate:config', 'validate:languages'));
-gulp.task('default', gulp.parallel('lint', 'validate'));
+gulp.task('default', gulp.series('lint', 'validate:config', 'validate:languages'));

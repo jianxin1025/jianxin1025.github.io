@@ -1,38 +1,90 @@
-nav:
+---
+name: Español
+title:
+  archive: Archivo
+  category: Categoría
+  tag: Etiqueta
+  schedule: Calendario
+menu:
   home: Inicio
-  about: Acerca de
-  articles: Articulos
-  projects: Proyectos
+  archives: Archivo
+  categories: Categorías
+  tags: Etiquetas
+  about: Sobre mi
   search: Buscar
-
-footer:
-  copyright: Copyright
-
-index:
-  find_me_on: Encuentrame en
-  enum_comma: ','
-  enum_and: y
-  articles: Articulos
-  projects: Proyectos
-
+  schedule: Calendario
+  sitemap: Mapa del sitio
+  commonweal: Commonweal 404
+sidebar:
+  overview: Inicio
+  toc: Tabla de contenidos
 post:
-  desktop:
-    previous: Post Anterior
-    next: Post Siguiente
-    back_to_top: Arriba
-    share: Compartir Post
-  mobile:
-    menu: Menu
-    toc: TOC
-    back_to_top: Top
-    share: Compartir
-
+  posted: Publicado el
+  edited: Editado el
+  created: Creado por
+  modified: Modificado por
+  edit: Editar esta entrada
+  in: En
+  read_more: Leer más
+  untitled: Sin título
+  sticky: Sticky
+  views: Visitas
+  related_posts: Entradas relacionadas
+  copyright:
+    author: Autor de la entrada
+    link: Enlace a la entrada
+    license_title: Copyright
+    license_content: "Todos los artículos de este blog están licenciados bajo %s a no ser que se especifique una licencia adicional."
+footer:
+  powered: "Creado mediante %s"
+  total_views: Visitas totales
+  total_visitors: Visitantes totales
+counter:
+  tag_cloud:
+    zero: Sin etiquetas
+    one: 1 etiqueta en total
+    other: "%d etiquetas en total"
+  categories:
+    zero: Sin categorías
+    one: 1 categoría en total
+    other: "%d categorías en total"
+  archive_posts:
+    zero: Sin entradas.
+    one: 1 entrada.
+    other: "%d entradas en total."
+state:
+  posts: entradas
+  tags: tags
+  categories: categorías
 search:
-  search: Buscar...
-  no_results: No se encontraron resultados.
-
-pagination:
-  page: Pagina %d de %d
-
-comments:
-  no_js: Por favor activa JavaScript para ver el contenido.
+  placeholder: Buscando...
+cheers:
+  um: Um..
+  ok: Bueno
+  nice: Guai
+  good: Bien
+  great: Genial
+  excellent: Excelente
+keep_on: Sigue posteando.
+symbol:
+  comma: ", "
+  period: ". "
+  colon: ": "
+reward:
+  donate: Donar
+  wechatpay: WeChat Pay
+  alipay: Alipay
+  paypal: PayPal
+  bitcoin: Bitcoin
+follow_me:
+  welcome: Welcome to my other publishing channels
+accessibility:
+  nav_toggle: Cambiar a barra de navegación
+  prev_page: Página anterior
+  next_page: Página siguiente
+symbols_count_time:
+  count: Cantidad de caracteres en el articulo
+  count_total: Cantidad total de caracteres
+  time: Tiempo de lectura
+  time_total: Tiempo total de lectura
+  time_minutes: minutos.
