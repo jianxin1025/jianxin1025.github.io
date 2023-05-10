@@ -1,36 +1,30 @@
 {
-  "name": "hexo-theme-next",
-  "version": "7.8.0",
-  "description": "Elegant and powerful theme for Hexo.",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "gulp"
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.9.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/theme-next/hexo-theme-next.git"
-  },
-  "keywords": [
-    "hexo",
-    "theme",
-    "next"
-  ],
-  "author": "NexT <support@theme-next.org> (https://theme-next.org)",
-  "license": "AGPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/theme-next/hexo-theme-next/issues"
-  },
-  "homepage": "https://theme-next.org",
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-theme-next": "^1.1.4",
-    "gulp": "^4.0.2",
-    "gulp-eslint": "^6.0.0",
-    "gulp-shell": "^0.8.0",
-    "js-yaml": "^3.13.1",
-    "stylint": "^2.0.0"
-  },
-  "engines": {
-    "node": ">=10.9.0"
+  "dependencies": {
+    "eslint": "^6.0.1",
+    "hexo": "^3.9.0",
+    "hexo-baidu-url-submit": "0.0.6",
+    "hexo-deployer-git": "^1.0.0",
+    "hexo-generator-archive": "^0.1.5",
+    "hexo-generator-baidu-sitemap": "^0.1.6",
+    "hexo-generator-category": "^0.1.3",
+    "hexo-generator-feed": "^1.2.2",
+    "hexo-generator-index": "^0.2.1",
+    "hexo-generator-search": "^2.4.0",
+    "hexo-generator-sitemap": "^1.2.0",
+    "hexo-generator-tag": "^0.2.0",
+    "hexo-helper-live2d": "^3.1.1",
+    "hexo-permalink-pinyin": "^1.1.0",
+    "hexo-prism-plugin": "^2.3.0",
+    "hexo-renderer-ejs": "^0.3.1",
+    "hexo-renderer-marked": "^1.0.1",
+    "hexo-renderer-stylus": "^0.3.3",
+    "hexo-server": "^0.3.3",
+    "hexo-wordcount": "^6.0.1"
   }
 }
