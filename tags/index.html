@@ -350,7 +350,17 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "积极主动，平凡的改变将改变平凡！",
+                                "积极主动，平凡的改变将改变平凡。",
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途。",
+                            
+                                "弱者只有千难万难，而勇者则能披荆斩棘；愚者只有声声哀叹，智者却有千路万路。",
+                            
+                                "不要期待，不要假想，不要强求，顺其自然，如果注定，便一定会发生。心安，便是活着的最美好状态。",
+                            
+                                "永远不要轻信你眼前的判断，永远不要看低任何人，别人的涵养只是你没看到而已。耳不闻人之非，目不视人之短，口不言人之过。",
+                            
+                                "很多时候，当我们把自身变得更优秀时，那些困扰你的问题自然而然就解决了，所以，不要把情绪集中在那些无用又暂时无法解决的事情上。",
                             
                         ],
                         startDelay: 300,
@@ -396,10 +406,52 @@
             </div>
             <div class="tag-chips">
                 
+                
+                <a href="/tags/Nginx/" title="Nginx: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Nginx" style="background-color: #F9EBEA;">Nginx
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Kubernetes/" title="Kubernetes: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Kubernetes" style="background-color: #F5EEF8;">Kubernetes
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
             </div>
         </div>
     </div>
 </div>
+
+    
+    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
+<style type="text/css">
+    #tag-wordcloud {
+        width: 100%;
+        height: 300px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="tag-wordcloud" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
+<script type="text/javascript">
+    
+
+    $('#tag-wordcloud').jQCloud([{"text":"Nginx","weight":1,"link":"/tags/Nginx/"},{"text":"Kubernetes","weight":1,"link":"/tags/Kubernetes/"}], {
+        autoResize: true
+    });
+</script>
 
     
 

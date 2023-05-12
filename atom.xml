@@ -6,7 +6,7 @@
   <link href="https://jianxin1025.github.io/atom.xml" rel="self"/>
   
   <link href="https://jianxin1025.github.io/"/>
-  <updated>2023-05-11T07:28:44.250Z</updated>
+  <updated>2023-05-12T08:08:39.369Z</updated>
   <id>https://jianxin1025.github.io/</id>
   
   <author>
@@ -21,32 +21,17 @@
     <link href="https://jianxin1025.github.io/2023/05/11/first/"/>
     <id>https://jianxin1025.github.io/2023/05/11/first/</id>
     <published>2023-05-11T07:28:44.000Z</published>
-    <updated>2023-05-11T07:28:44.250Z</updated>
+    <updated>2023-05-12T08:08:39.369Z</updated>
     
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://jianxin1025.github.io/2023/05/11/hello-world/"/>
-    <id>https://jianxin1025.github.io/2023/05/11/hello-world/</id>
-    <published>2023-05-11T07:22:42.942Z</published>
-    <updated>2023-05-11T07:22:42.942Z</updated>
+    <category term="运维" scheme="https://jianxin1025.github.io/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <category term="Nginx" scheme="https://jianxin1025.github.io/tags/Nginx/"/>
     
-    
-    
+    <category term="Kubernetes" scheme="https://jianxin1025.github.io/tags/Kubernetes/"/>
     
   </entry>
   
