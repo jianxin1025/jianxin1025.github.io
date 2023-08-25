@@ -57,27 +57,84 @@
 
 
 <body>
-    
-    <div class="weather">
-        <!-- 《添加“心知天气”-->
-          <div id="tp-weather-widget"></div>
+
+    <!-- <div id="tp-weather-widget"></div>
+    <script>(function(a, h, g, f, e, d, c, b) {
+        b = function() {
+          d = h.createElement(g);
+          c = h.getElementsByTagName(g)[0];
+          d.src = e;
+          d.charset = "utf-8";
+          d.async = 1;
+          c.parentNode.insertBefore(d, c)
+        };
+        a["SeniverseWeatherWidgetObject"] = f;
+        a[f] || (a[f] = function() { (a[f].q = a[f].q || []).push(arguments)
+        });
+        a[f].l = +new Date();
+        if (a.attachEvent) {
+          a.attachEvent("onload", b)
+        } else {
+          a.addEventListener("load", b, false)
+        }
+      } (window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+      window.SeniverseWeatherWidget('show', {
+        flavor: "slim",
+        location: "WTW3SJ5ZBJUY",
+        geolocation: true,
+        language: "auto",
+        unit: "c",
+        theme: "auto",
+        token: "b1c81df7-cdd0-40b2-ad98-207fa1810559",
+        hover: "enabled",
+        container: "tp-weather-widget"
+      })</script>
+
+    <div class="showTime"></div>
         <script>
-          (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
-          window.SeniverseWeatherWidget('show', {
-            flavor: "slim",
-            location: "WX4FBXXFKE4F",
-            geolocation: true,
-            // language: "zh-Hans",
-            language: "auto",
-            unit: "c",
-            theme: "auto",
-            token: "efb760e3-5326-4f08-839b-122738249a17",
-            hover: "enabled",
-            container: "tp-weather-widget"
-          })
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+            clearTimeout(t); //清除定时器
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours(); //获取时
+            var m = dt.getMinutes(); //获取分
+            var s = dt.getSeconds(); //获取秒
+            document.querySelector(".showTime").innerHTML =
+            "当前时间：" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "-" +
+            h +
+            "时" +
+            m +
+            "分" +
+            s +
+            "秒";
+            t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
         </script>
-        <!-- 添加“心知天气”》-->
-    </div>
+    <span id="beijing" class="time">
+    </span>
+    <span class="week">
+      <script>document.write("星期" + "日一二三四五六".charAt(new Date().getDay()))</script>
+    </span>
+    <span class="solarlunar">
+      <script src="https://me.jinchuang.org/usr/themes/typecho_Sgreen-master/js/nongli.min.js" type="text/javascript">
+      </script>
+      <script src="https://me.jinchuang.org/usr/themes/typecho_Sgreen-master/js/time.js" type="text/javascript">
+      </script>
+      <script>$(function() {
+          var lunar = calendar.solar2lunar();
+          $('.solarlunar').html('' + '农历: ' + lunar.gzYear + '年' + '&nbsp;&nbsp;' + lunar.IMonthCn + lunar.IDayCn + '');
+        });</script>
+    </span> -->
 
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -644,30 +701,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/05/19/dian-shi-ban-ying-yong-xia-zai-wang-zhi/">
+                <a href="/2023/05/19/zai-xian-yin-le-shi-pin-yu-le-wang-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="电视版应用下载网址">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="在线音乐视频娱乐网址">
                         
-                        <span class="card-title">电视版应用下载网址</span>
+                        <span class="card-title">在线音乐视频娱乐网址</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            电视版应用下载网址汇总
+                            在线音乐视频娱乐网址汇总
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -680,7 +736,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -699,19 +754,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/19/zai-xian-ying-shi-wang-zhi/">
+                <a href="/2023/05/19/zai-xian-zhi-tu-wang-zhan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="在线影视网址">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="在线制图网站">
                         
-                        <span class="card-title">在线影视网址</span>
+                        <span class="card-title">在线制图网站</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在线影视网址汇总
+                            在线制图网站汇总
                         
                     </div>
                     <div class="publish-info">
@@ -722,8 +777,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%A8%B1%E4%B9%90/" class="post-category">
-                                    娱乐
+                            <a href="/categories/%E5%BC%80%E5%8F%91/" class="post-category">
+                                    开发
                                 </a>
                             
                             
