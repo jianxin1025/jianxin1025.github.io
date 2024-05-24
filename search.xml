@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>公共DNS服务器汇总</title>
+      <link href="/2024/05/24/gong-gong-dns-fu-wu-qi-hui-zong/"/>
+      <url>/2024/05/24/gong-gong-dns-fu-wu-qi-hui-zong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="时间服务器汇总"><a href="#时间服务器汇总" class="headerlink" title="时间服务器汇总"></a>时间服务器汇总</h1><dl><dt>114DNS</dt><dd>114.114.114.114 114.114.115.115<br>  114.114.114.119 114.114.115.119<br>  114.114.114.110 114.114.115.110</dd></dl><dl><dt>阿里云公共DNS</dt><dd>223.5.5.5 223.6.6.6</dd></dl><dl><dt>腾讯公共DNS</dt><dd>119.29.29.29 182.254.116.116</dd></dl><dl><dt>百度公共DNS</dt><dd>180.76.76.76</dd></dl><dl><dt>字节跳动公共DNS</dt><dd>180.184.1.1 180.184.2.2</dd></dl><dl><dt>Google DNS</dt><dd>8.8.8.8 8.8.4.4</dd></dl><dl><dt>Cloudflare DNS</dt><dd>1.1.1.1 1.0.0.1</dd></dl>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tools </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在线制图网站汇总</title>
       <link href="/2024/05/23/zai-xian-zhi-tu-wang-zhan/"/>
       <url>/2024/05/23/zai-xian-zhi-tu-wang-zhan/</url>
